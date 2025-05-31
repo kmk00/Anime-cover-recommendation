@@ -1,4 +1,4 @@
-import { HoverCard, HoverCardTrigger } from "./ui/hover-card";
+import { HoverCard, HoverCardTrigger } from "../ui/hover-card";
 import RecommendationHoverDetails from "./RecommendationHoverDetails";
 import { useState } from "react";
 

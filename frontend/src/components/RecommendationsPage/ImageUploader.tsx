@@ -1,10 +1,10 @@
 import { useState } from "react";
-import { Button } from "./ui/button";
 import { cn } from "@/lib/utils";
 import { useMutation } from "@tanstack/react-query";
 import axios from "axios";
 import { useRecommendationsStore } from "@/store/recommendations";
 import type { AnimeRecommendationsDataResponse } from "@/types/Recommendations";
+import { Button } from "../ui/button";
 
 const ImageUploader = () => {
   const [image, setImage] = useState<File | null>(null);
@@ -79,9 +79,11 @@ const ImageUploader = () => {
   if (imagePreview) {
     return (
       <div className="mb-4">
-        <h2 className="text-2xl font-bold text-center">Analyze your image</h2>
+        <h2 className="text-2xl font-bold text-center mb-4">
+          Analyze your image
+        </h2>
         <div className="mx-auto w-[300px]">
-          <div className="flex justify-center items-center p-2">
+          <div className="flex justify-center items-center px-2 pb-2">
             <div className="w-[300px] relative overflow-hidden rounded-md ">
               {analyzeCoverMutation.isPending && (
                 <div className="absolute top-0 left-0 w-full h-full bg-primary/40 animate-pulse" />
@@ -126,7 +128,7 @@ const ImageUploader = () => {
 
   return (
     <div className="mb-4">
-      <h2 className="text-2xl font-bold text-center">Upload an image</h2>
+      <h2 className="text-2xl font-bold text-center mb-4">Upload an image</h2>
       <form className="lg:w-[400px] w-[300px] mx-auto">
         <div className="flex flex-col gap-4">
           <div className="flex flex-col gap-2 group">

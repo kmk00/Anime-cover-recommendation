@@ -1,5 +1,5 @@
-import ImageUploader from "./components/ImageUploader";
-import RecommendationResults from "./components/RecommendationResults";
+import ImageUploader from "./components/RecommendationsPage/ImageUploader";
+import RecommendationResults from "./components/RecommendationsPage/RecommendationResults";
 import { useRecommendationsStore } from "./store/recommendations";
 
 function App() {

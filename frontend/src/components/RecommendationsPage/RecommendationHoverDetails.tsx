@@ -1,9 +1,9 @@
-import { HoverCardContent } from "./ui/hover-card";
+import { HoverCardContent } from "../ui/hover-card";
 import { BookOpen, Calendar, Clock, Medal, Star } from "lucide-react";
-import { Badge } from "./ui/badge";
+import { Badge } from "../ui/badge";
 import { useQuery } from "@tanstack/react-query";
 import { animeApi } from "@/lib/animeApi";
-import ErrorComponent from "./ErrorComponent";
+import ErrorComponent from "../ErrorComponent";
 import RecommendationHoverSceleton from "./RecommendationHoverSceleton";
 
 const RecommendationHoverDetails = ({

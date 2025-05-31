@@ -1,5 +1,5 @@
-import Loading from "./Loading";
-import { HoverCardContent } from "./ui/hover-card";
+import Loading from "../Loading";
+import { HoverCardContent } from "../ui/hover-card";
 
 const RecommendationHoverSceleton = () => {
   return (
