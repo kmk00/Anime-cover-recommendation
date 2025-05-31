@@ -14,7 +14,7 @@ load_dotenv()
 
 
 pc = Pinecone(api_key=os.getenv("PINECONE_API_KEY"))
-index_name = "anime-covers-histogram" 
+index_name = os.getenv("PINECONE_INDEX_NAME")
 
 if index_name not in pc.list_indexes().names(): 
     pc.create_index(
