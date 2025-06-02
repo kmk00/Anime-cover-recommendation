@@ -5,6 +5,8 @@ import axios from "axios";
 import { useRecommendationsStore } from "@/store/recommendations";
 import type { AnimeRecommendationsDataResponse } from "@/types/Recommendations";
 import { Button } from "../ui/button";
+import RandomizeSelectionPanel from "./RandomizeSelectionPanel";
+import { useRandomizeSelectionStore } from "@/store/randomizeSelection";
 
 const ImageUploader = () => {
   const [image, setImage] = useState<File | null>(null);
@@ -12,6 +14,7 @@ const ImageUploader = () => {
   const [imagePreview, setImagePreview] = useState<string | null>(null);
 
   const { setRecommendations } = useRecommendationsStore();
+  const { resetSelection } = useRandomizeSelectionStore();
 
   const analyzeCoverMutation = useMutation({
     mutationFn: async (file: File) => {
@@ -74,6 +77,7 @@ const ImageUploader = () => {
     setImage(null);
     setImagePreview(null);
     setError(null);
+    resetSelection();
   };
 
   if (imagePreview) {
@@ -114,6 +118,7 @@ const ImageUploader = () => {
               Reset
             </Button>
           </div>
+          <RandomizeSelectionPanel />
           <div className="mt-2">
             {error && (
               <p className="text-red-500 bg-black/80 rounded-md p-2 text-center">
