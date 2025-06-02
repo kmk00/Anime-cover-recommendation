@@ -24,6 +24,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+COVERS_LIMIT = 24
+
 def extract_histogram(img_bytes, bins=(8,8,8)):
     arr = np.frombuffer(img_bytes, np.uint8)
     img = cv2.imdecode(arr, cv2.IMREAD_COLOR)
@@ -43,7 +45,7 @@ def calculate_similarity_percentage(score):
 async def recommend(cover: UploadFile = File(...)):
     img_bytes = await cover.read()
     query_vec = extract_histogram(img_bytes)
-    resp = index.query(vector=query_vec, top_k=30, include_metadata=True)
+    resp = index.query(vector=query_vec, top_k=COVERS_LIMIT, include_metadata=True)
     data = []
     for match in resp["matches"]:
         similarity_percentage = calculate_similarity_percentage(match["score"])
