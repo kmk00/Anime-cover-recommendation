@@ -7,6 +7,8 @@ import { Badge } from "../ui/badge";
 import { BookOpen, Calendar, Clock, Medal, Star } from "lucide-react";
 import Loading from "../Loading";
 import { Button } from "../ui/button";
+import { fireConfetti } from "@/lib/confettiReal";
+import Confetti from "./Confetti";
 
 const RandomSelected = () => {
   const { recommendations } = useRecommendationsStore();
@@ -44,12 +46,12 @@ const RandomSelected = () => {
 
   return (
     <div className="absolute w-full h-full bg-black/70 z-10 flex items-center justify-center">
-      <div className="w-80 p-0 overflow-hidden absolute bg-white rounded-3xl">
+      <div className="w-80 p-0 z-50 overflow-hidden absolute bg-white rounded-3xl">
         <div className="relative overflow-hidden">
           <img
             src={animeData.data.images.webp.large_image_url}
             alt={animeData.data.title}
-            className="w-full object-cover"
+            className="w-full max-h-72 object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent flex items-end">
             <div className="p-4 text-white w-full">

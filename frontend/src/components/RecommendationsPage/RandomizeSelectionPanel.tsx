@@ -1,6 +1,7 @@
 import { useRandomizeSelectionStore } from "@/store/randomizeSelection";
 import { Button } from "../ui/button";
 import { useRecommendationsStore } from "@/store/recommendations";
+import scrollToElement from "@/lib/scrolltoElement";
 
 const RandomizeSelectionPanel = () => {
   const { triggerRandomizeAnimation } = useRandomizeSelectionStore();
@@ -12,6 +13,7 @@ const RandomizeSelectionPanel = () => {
 
   const handleRandomize = () => {
     if (recommendations && recommendations.length > 0) {
+      scrollToElement("recommendation-modal");
       triggerRandomizeAnimation(recommendations.length);
     }
   };
