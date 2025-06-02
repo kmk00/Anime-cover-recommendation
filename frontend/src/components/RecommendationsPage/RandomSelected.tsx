@@ -4,15 +4,13 @@ import { useRecommendationsStore } from "@/store/recommendations";
 import { useQuery } from "@tanstack/react-query";
 import ErrorComponent from "../ErrorComponent";
 import { Badge } from "../ui/badge";
-import { BookOpen, Calendar, Clock, Medal, Star } from "lucide-react";
+import { BookOpen, Calendar, Clock, Medal, Star, X } from "lucide-react";
 import Loading from "../Loading";
 import { Button } from "../ui/button";
-import { fireConfetti } from "@/lib/confettiReal";
-import Confetti from "./Confetti";
 
 const RandomSelected = () => {
   const { recommendations } = useRecommendationsStore();
-  const { selectedCardId } = useRandomizeSelectionStore();
+  const { selectedCardId, resetSelection } = useRandomizeSelectionStore();
 
   // Get the selected recommendation data
   const selectedRecommendation =
@@ -43,6 +41,10 @@ const RandomSelected = () => {
     return <ErrorComponent errorMesage="Could not load recommendation" />;
 
   if (!animeData) return <ErrorComponent errorMesage="No data found" />;
+
+  const handleClose = () => {
+    resetSelection();
+  };
 
   return (
     <div className="absolute w-full h-full bg-black/70 z-10 flex items-center justify-center">
@@ -150,6 +152,12 @@ const RandomSelected = () => {
             </Button>
           </a>
         </div>
+        <button
+          onClick={handleClose}
+          className="absolute cursor-pointer bg-black hover:bg-primary transition-colors  rounded-lg top-3 right-3"
+        >
+          <X className="text-white" size={32} />
+        </button>
       </div>
     </div>
   );
