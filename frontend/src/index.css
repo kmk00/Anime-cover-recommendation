@@ -169,3 +169,15 @@
 .animate-card-appear {
   animation: card-appear 0.6s ease-out;
 }
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-image: url("../public/images/background.png");
+}
+
+.font-montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
+}

@@ -9,7 +9,7 @@ const RecommendationResults = () => {
 
   return (
     <div id="recommendation-modal" className="w-full h-fit ">
-      <h2 className="text-2xl text-right font-bold mb-4">
+      <h2 className="text-2xl text-right font-bold mb-4 uppercase">
         Similar to your image
       </h2>
       <div className="grid md:grid-cols-[repeat(auto-fill,minmax(150px,1fr))] grid-cols-[repeat(auto-fill,minmax(100px,1fr))]  gap-4 relative">

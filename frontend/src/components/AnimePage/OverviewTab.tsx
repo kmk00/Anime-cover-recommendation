@@ -1,4 +1,3 @@
-import scrollToElement from "@/lib/scrolltoElement";
 import { Card, CardContent } from "../ui/card";
 import TabHeading from "./TabHeading";
 import { cn } from "@/lib/utils";
@@ -17,8 +16,6 @@ const OverviewTab = ({ overview }: OverviewTabProps) => {
         </Card>
       </main>
     );
-
-  scrollToElement("tabs-navigation");
 
   const paragraphs = overview.split("\n").map((para, index) => (
     <p

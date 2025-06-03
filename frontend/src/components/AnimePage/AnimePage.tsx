@@ -18,7 +18,7 @@ const AnimePage = ({ animeDetails }: { animeDetails: AnimeData }) => {
 
   return (
     <div className=" min-h-screen  p-6">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-6xl bg-primary-foreground rounded-md p-2 mx-auto">
         <HeroSection animeDetails={animeDetails} />
 
         <Tabs

@@ -83,7 +83,7 @@ const ImageUploader = () => {
   if (imagePreview) {
     return (
       <div className="mb-4">
-        <h2 className="text-2xl font-bold text-center mb-4">
+        <h2 className="text-2xl font-bold text-center mb-4 font-montserrat uppercase">
           Analyze your image
         </h2>
         <div className="mx-auto w-[300px]">
@@ -133,7 +133,9 @@ const ImageUploader = () => {
 
   return (
     <div className="mb-4">
-      <h2 className="text-2xl font-bold text-center mb-4">Upload an image</h2>
+      <h2 className="text-2xl font-bold text-center mb-4 font-montserrat uppercase">
+        Upload an image
+      </h2>
       <form className="lg:w-[400px] w-[300px] mx-auto">
         <div className="flex flex-col gap-4">
           <div className="flex flex-col gap-2 group">
