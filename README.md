@@ -18,6 +18,8 @@ This project is a full-stack web application that recommends anime based on an u
 
 🔗 Frontend-backend communication using FastAPI + REST
 
+Video:
+
 [![image](https://github.com/user-attachments/assets/aec9554e-3a9e-4e2e-af3e-df12306e1c07)
 ](https://youtu.be/iE1k_XsvyTE)
 
