@@ -24,7 +24,7 @@ Video:
 https://www.youtube.com/watch?v=sX1-npiW4vw
 
 [![image](https://github.com/user-attachments/assets/aec9554e-3a9e-4e2e-af3e-df12306e1c07)
-](https://youtu.be/iE1k_XsvyTE)
+](https://youtu.be/sX1-npiW4vw)
 
 [![image](https://github.com/user-attachments/assets/8ee5560e-04b8-42d2-9273-53e58e302a42)
 ](https://youtu.be/sX1-npiW4vw)
